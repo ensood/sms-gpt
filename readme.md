@@ -48,6 +48,7 @@ To run this project locally, you'll need to:
 
 ## Test Report:
 
+Coverage Table:
 
 ```
 Name                              Stmts   Miss  Cover
