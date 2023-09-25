@@ -48,8 +48,7 @@ To run this project locally, you'll need to:
 
 ## Test Report:
 
-Coverage Table:
-
+Coverage Table:   
 ```
 Name                              Stmts   Miss  Cover
 -----------------------------------------------------
@@ -65,3 +64,5 @@ tests/test_sms_gpt.py                25      1    96%
 tests/test_twilio_handler.py         25      1    96%
 -----------------------------------------------------
 TOTAL                               226     24    89%
+
+```
