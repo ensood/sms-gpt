@@ -1,4 +1,4 @@
-# SMS based assistant with OpenAI and Twilio
+# SMS-based assistant with OpenAI and Twilio
 
 ## Overview
 
@@ -17,7 +17,7 @@ This diagram provides a high-level view of my system, showcasing the interaction
 - Flask App: Our central processing hub.   
 - OpenAI API: create generative responses.    
 
-Messages flow from the client to Twilio, then to our Flask app for pre-processing, then using the OpenAI API for generative response. Finally, responses are sent back to user through Twilio and via SMS.
+Messages flow from the client to Twilio, then to our Flask app for pre-processing, and then using the OpenAI API for generative response. Finally, responses are sent back to users through Twilio and via SMS.
 
 ## Features
 
@@ -34,8 +34,8 @@ To run this project locally, you'll need to:
 2. Set up a Python environment with the required dependencies; use requirments.txt
 3. API keys and credentials should be stored securely and loaded from environment variables.  
    NOTE: For simplicity, configure your API keys and credentials in the `configuration/config.json` file.
-4. Setup webhook for text messages in Twilio console; ex. yourdomain.com/sms  
-   NOTE: For test, use ngrok to setup a local http server with exposer to the internet
+4. Set up webhook for text messages in Twilio console; ex. yourdomain.com/sms  
+   NOTE: For the test, use ngrok to setup a local http server with exposure to the internet
 5. Start the Flask application using `python app.py`.
 
 ## Usage
@@ -48,7 +48,7 @@ To run this project locally, you'll need to:
 
 ## Test Report:
 
-```Coverage Table:
+```Coverage Table:     
 Name                              Stmts   Miss  Cover
 -----------------------------------------------------
 app.py                               39     12    69%
