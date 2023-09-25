@@ -1,0 +1,43 @@
+name: Test and report
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run and Generate test report
+        run: |
+          coverage run -m unittest
+          coverage report --format=text > test_report.txt
+          sed -i '/^```Coverage Table:/,$d' readme.md
+          echo -e '\n```Coverage Table:' >> readme.md
+          cat test_report.txt >> readme.md
+          echo '```' >> readme.md
+        working-directory: ${{ github.workspace }}
+        if: always()
+        
+      - name: Commit and push test report
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add readme.md
+          git commit -m "Add unit test report" || true
+          git push
+        working-directory: ${{ github.workspace }}
+        if: always()
