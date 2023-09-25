@@ -7,7 +7,7 @@ This is a simple SMS assistant project that utilized the OpenAI API and Twilio t
 ## High-level System Overview
 
 <p align="center">
-  <img src="https://github.com/ensood/sms-gpt/blob/main/system.png" alt="High-level System Overview">
+  <img src="https://github.com/ensood/sms-gpt/blob/main/system.png" alt="High-level System Overview.">
 </p>
 
 This diagram provides a high-level view of my system, showcasing the interactions between various components.      
