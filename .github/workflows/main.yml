@@ -25,8 +25,8 @@ jobs:
         run: |
           coverage run -m unittest
           coverage report --format=text > test_report.txt
-          sed -i '/^```Coverage Table:/,$d' readme.md
-          echo -e '\n```Coverage Table:    \n' && cat test_report.txt && echo -e '\n```' >> readme.md
+          sed -i '/^Coverage Table:/,$d' readme.md
+          echo -e 'Coverage Table:   \n```' && cat test_report.txt && echo -e '\n```' >> readme.md
           cat test_report.txt >> readme.md
           echo '```' >> readme.md
         working-directory: ${{ github.workspace }}

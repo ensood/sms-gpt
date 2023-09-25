@@ -48,8 +48,9 @@ To run this project locally, you'll need to:
 
 ## Test Report:
 
+Coverage Table:
 
-```Coverage Table:     
+```     
 Name                              Stmts   Miss  Cover
 -----------------------------------------------------
 app.py                               39     12    69%
