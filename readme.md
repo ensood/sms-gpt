@@ -65,4 +65,3 @@ tests/test_sms_gpt.py                25      1    96%
 tests/test_twilio_handler.py         25      1    96%
 -----------------------------------------------------
 TOTAL                               226     24    89%
-```
